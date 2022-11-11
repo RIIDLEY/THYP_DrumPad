@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:padding="10dp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Drum Pad"
+        android:textColor="#FFFFFF"
+        android:textSize="50dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <Button
+            android:id="@+id/Pad"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="Drum Pad"
+            android:background="@drawable/log"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            />
+        <Button
+            android:id="@+id/crea"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="Mes créations"
+            android:background="@drawable/log"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            />
+        <Button
+            android:id="@+id/commu"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="Communaute"
+            android:background="@drawable/log"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            />
+
+        <Button
+            android:id="@+id/about"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="A propos"
+            android:background="@drawable/log"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

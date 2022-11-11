@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.MesCreations"
+    android:background="@color/colorPrimary">
+    <Button
+        android:id="@+id/retour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/log"
+        android:text="Accueil"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/image_deco"
+        android:layout_width="450px"
+        android:layout_height="450px"
+        android:src="@drawable/logo_mescreations"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titreMusique"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="titre"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_deco" />
+
+    <TextView
+        android:id="@+id/nbmusique"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="nbmusique"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titreMusique" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titreMusique">
+
+        <SeekBar
+            android:paddingBottom="50px"
+            android:id="@+id/SeekBar"
+            android:progress="0"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/start"
+                android:background="@drawable/log"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Start" />
+
+            <Button
+                android:id="@+id/pause"
+                android:background="@drawable/log"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pause" />
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/skip"
+                android:background="@drawable/log"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Skip" />
+
+            <Button
+                android:id="@+id/back"
+                android:background="@drawable/log"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Back" />
+
+            <Button
+                android:id="@+id/upload"
+                android:background="@drawable/log"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Partager" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/remove"
+                android:background="@drawable/log"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Supprimer" />
+
+            <Button
+                android:id="@+id/rename"
+                android:background="@drawable/log"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rename" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
