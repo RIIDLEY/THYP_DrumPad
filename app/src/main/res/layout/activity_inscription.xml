@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimary"
+    android:padding="10dp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/retour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/log"
+        android:text="Accueil"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Inscription"
+        android:textColor="#FFFFFF"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/pseudo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <EditText
+        android:id="@+id/pseudo"
+        android:singleLine="true"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:hint="Pseudo"
+        android:textColorHint="#787474"
+        android:textColor="#FFFFFF"
+        android:padding="15px"
+        android:backgroundTint="#787474"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/mdp"
+        android:singleLine="true"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:hint="Mot de passe"
+        android:textColorHint="#787474"
+        android:textColor="#FFFFFF"
+        android:padding="15px"
+        android:backgroundTint="#787474"
+        app:layout_constraintTop_toBottomOf="@+id/pseudo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:inputType="textPassword"
+        />
+
+    <EditText
+        android:id="@+id/mdpSec"
+        android:singleLine="true"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:hint="Confirmation MDP"
+        android:textColorHint="#787474"
+        android:textColor="#FFFFFF"
+        android:padding="15px"
+        android:backgroundTint="#787474"
+        app:layout_constraintTop_toBottomOf="@+id/mdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:inputType="textPassword"
+        />
+
+    <EditText
+        android:id="@+id/mail"
+        android:singleLine="true"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:hint="Mail"
+        android:textColorHint="#787474"
+        android:textColor="#FFFFFF"
+        android:padding="15px"
+        android:backgroundTint="#787474"
+        app:layout_constraintTop_toBottomOf="@+id/mdpSec"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <Button
+        android:text="Sign Up"
+        android:layout_width="150dp"
+        android:background="@drawable/log"
+        android:layout_height="wrap_content"
+        android:id="@+id/boutonlog"
+        app:layout_constraintTop_toBottomOf="@+id/mail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="inscription"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

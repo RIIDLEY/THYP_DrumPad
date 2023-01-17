@@ -18,6 +18,7 @@ import com.android.volley.RequestQueue
 import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
+import com.example.drumpad.API_Upload.UploadUtility
 import com.example.drumpad.R
 import kotlinx.android.synthetic.main.activity_mes_creations.retour
 import kotlinx.android.synthetic.main.activity_mes_creations.*
@@ -173,7 +174,22 @@ class MesCreations : AppCompatActivity() {
         }
 
         upload.setOnClickListener {
-            Log.i("Upload","send")
+            if(!isInDB){
+                if (sharedPreferences.getString("Login", "")?.isNotEmpty()!!) {//s'il a un compte
+                    Log.i("UploadFileName",File)
+                    UploadUtility(this).uploadFile(File)// la musique est upload
+                    toServerLogin("$titreActuel.mp3", sharedPreferences.getString("Login", "")!!,"insertMusique")
+                }else{//sinon
+                    val dialog: AlertDialog.Builder = AlertDialog.Builder(this)
+                        .setTitle("")
+                        .setMessage("Vous devez avoir un compte pour upload votre musique.\nRendez vous dans l'onglet Communauté")
+                        .setNegativeButton("Ok",null)
+                    dialog.show()// alertdialog pour dire qu'il a pas de compte
+                }
+            }else{// si musique avec titre similaire est deja dans la DB
+                Toast.makeText(this, "Un autre artiste a deja mis en ligne \nune musique avec le meme nom", Toast.LENGTH_SHORT).show()
+            }
+
         }
 
         remove.setOnClickListener {
